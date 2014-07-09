@@ -42,4 +42,8 @@ describe BikeContainer do
 		expect(holder.available_bikes).to eq([working_bike])
 	end
 
+	it 'should not release a bike if there are no bikes to release' do
+		expect{holder.release(billy)}.to raise_error(RuntimeError)
+	end
+
 end

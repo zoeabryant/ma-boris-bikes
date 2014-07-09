@@ -5,7 +5,7 @@ describe DockingStation do
 	let (:moorgate) { DockingStation.new }
 
 	def fill_station(station)
-		20.times { station.dock(billy) }
+		10.times { station.dock(billy) }
 	end
 
 	it 'should accept a bike' do
@@ -37,6 +37,6 @@ describe DockingStation do
 		moorgate.dock(working_bike)
 		moorgate.dock(broken_bike)
 
-		expect(moorgate.availiable_bikes).to eq([working_bike])
+		expect(moorgate.available_bikes).to eq([working_bike])
 	end
 end
